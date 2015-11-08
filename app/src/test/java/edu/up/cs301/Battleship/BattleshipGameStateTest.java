@@ -116,12 +116,48 @@ public class BattleshipGameStateTest {
     }
 
     @Test
-    public void testSetUpUserShips() throws Exception {
+    public void testSetUpUserShips(int shipNum, int row, int col, boolean isHorizontal) throws Exception {
+        BattleshipGameState test = new BattleshipGameState();
+        if (shipNum == 1) {//Carrier
+            if(isHorizontal){
+                assertEquals(test.getUserGrid(), 3);
+            }
+            else{
+                assertEquals(test.getUserGrid(), 3);
+            }
+        }
+        if (shipNum == 2) {//Battleship
+            assertEquals(test.getUserGrid(), 3);
+        }
+        if (shipNum == 3) {//Destroyer
+            assertEquals(test.getUserGrid(), 3);
+        }
+        if (shipNum == 4) {//Submarine
+            assertEquals(test.getUserGrid(), 3);
+        }
+        if (shipNum == 5) {//PTBoat
+            assertEquals(test.getUserGrid(), 3);
+        }
 
     }
 
     @Test
-    public void testSetUpComputerShips() throws Exception {
-
+    public void testSetUpComputerShips(int shipNum, int row, int col, boolean isHorizontal) throws Exception {
+        BattleshipGameState test = new BattleshipGameState();
+        if (shipNum == 1);{//AICarrier
+            assertEquals(test.getComputerGrid(),3);
+        }
+        if (shipNum == 2);{//AIBattleship
+            assertEquals(test.getComputerGrid(),3);
+        }
+        if (shipNum == 3);{//AIDestroyer
+            assertEquals(test.getComputerGrid(),3);
+        }
+        if (shipNum == 4);{//AISubmarine
+            assertEquals(test.getComputerGrid(),3);
+        }
+        if (shipNum == 5);{//AIPTBoat
+            assertEquals(test.getComputerGrid(),3);
+        }
     }
 }

@@ -2,11 +2,11 @@
 <items version="2" >
 
     <item
-        jar="/Users/nathancamacho/Library/Android/sdk/extras/android/m2repository/com/android/support/support-v4/18.0.0/support-v4-18.0.0.jar"
+        jar="C:\Program Files\AndroidSDK\extras\android\m2repository\com\android\support\support-v4\18.0.0\support-v4-18.0.0.jar"
         jumboMode="false"
         revision="22.0.1"
         sha1="44ec51e9d395a47aab135e5e1b556c0007442156">
-        <dex dex="/Users/nathancamacho/Downloads/TTT/TTTProj/app/build/intermediates/pre-dexed/debug/support-v4-18.0.0-3a5df6c85597cbc1cdfd5f75ec6543e49d49b9b3.jar" />
+        <dex dex="C:\Users\sipek18\HW5DBattleshipGameState\app\build\intermediates\pre-dexed\debug\support-v4-18.0.0-5a8f8f1d2ea01b30ea8c77fccbee646d38d284ed.jar" />
     </item>
 
 </items>
