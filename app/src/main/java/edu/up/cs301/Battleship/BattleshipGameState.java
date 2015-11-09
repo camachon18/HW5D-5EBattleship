@@ -184,33 +184,36 @@ public class BattleshipGameState extends GameState {
     public int[] getComputerShipsLife() { return computerShipsLife; }
 
     public void shipHit(int row, int col, int ID) {
-        if (this.playerID == 0) {//human hit computer
-            //the player should be unable to click on a spot they already missed
-            //their turn may not end until they hit or miss a new spot on the opponent's grid
-            if (computerGrid[row][col] == 3) { //if a grid position equals 3, that means a ship is there
-                player1Hits = player1Hits + 1;
-                this.playerID = 1;
-                computerGrid[row][col] = 1;//1 means there is a hit in this position
-                for (int i = 0; i < shipID.length; i++) {
-                    if (ID == shipID[i]) {
-                        computerShipsLife[i] = computerShipsLife[i] - 1;
+            if (this.playerID == 0) {//human hit computer
+                //the player should be unable to click on a spot they already missed
+                //their turn may not end until they hit or miss a new spot on the opponent's grid
+                if (computerGrid[row][col] == 3) { //if a grid position equals 3, that means a ship is there
+                    player1Hits = player1Hits + 1;
+                    this.playerID = 1;
+                    computerGrid[row][col] = 1;//1 means there is a hit in this position
+                    for (int i = 0; i < shipID.length; i++) {
+                        if (ID == shipID[i]) {
+                            computerShipsLife[i] = computerShipsLife[i] - 1;
+                        }
                     }
+                } else {
+                    this.shipMissed(row, col);
                 }
-            }
-        }
-        else { //computer hit human
-            if (userGrid[row][col] == 3) {
-                player2Hits = player2Hits + 1;
-                this.playerID = 0;
-                userGrid[row][col] = 1;
-                for (int i = 0; i < shipID.length; i++) {
-                    if (ID == shipID[i]) {
-                        shipsLife[i] = shipsLife[i] - 1;
+            } else { //computer hit human
+                if (userGrid[row][col] == 3) {
+                    player2Hits = player2Hits + 1;
+                    this.playerID = 0;
+                    userGrid[row][col] = 1;
+                    for (int i = 0; i < shipID.length; i++) {
+                        if (ID == shipID[i]) {
+                            shipsLife[i] = shipsLife[i] - 1;
 
+                        }
                     }
+                } else {
+                    this.shipMissed(row, col);
                 }
             }
-        }
     }
     public void shipMissed(int row,int col) {
         if (this.playerID == 0){
