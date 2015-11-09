@@ -21,4 +21,4 @@
         android:onClick="doFinish"
         android:text="Back" />
 
-</RelativeLayout><!-- From: file:/C:/Users/sipek18/HW5DBattleshipGameState/app/src/main/res/layout/ttt_human_player1and2.xml -->
+</RelativeLayout><!-- From: file:/Users/nathancamacho/Documents/Apps/Nate's%20App/Android%20Apps/HW5DBattleshipGameState/app/src/main/res/layout/ttt_human_player1and2.xml -->

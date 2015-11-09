@@ -187,7 +187,7 @@ public class BattleshipGameState extends GameState {
         if (this.playerID == 0) {//human hit computer
             //the player should be unable to click on a spot they already missed
             //their turn may not end until they hit or miss a new spot on the opponent's grid
-            if (computerGrid[row][col] != 2 && computerGrid[row][col] == 3) { //if a grid position equals 3, that means a ship is there
+            if (computerGrid[row][col] == 3) { //if a grid position equals 3, that means a ship is there
                 player1Hits = player1Hits + 1;
                 this.playerID = 1;
                 computerGrid[row][col] = 1;//1 means there is a hit in this position
@@ -199,7 +199,7 @@ public class BattleshipGameState extends GameState {
             }
         }
         else { //computer hit human
-            if (userGrid[row][col] != 2 && userGrid[row][col] == 3) {
+            if (userGrid[row][col] == 3) {
                 player2Hits = player2Hits + 1;
                 this.playerID = 0;
                 userGrid[row][col] = 1;
@@ -215,13 +215,13 @@ public class BattleshipGameState extends GameState {
     public void shipMissed(int row,int col) {
         if (this.playerID == 0){
             //We don't want to change a spot that was hit to a miss
-            if (computerGrid[row][col] != 1 && computerGrid[row][col] != 3) {
+            if (computerGrid[row][col] == 0) {
                 computerGrid[row][col] = 2;
                 this.playerID = 1;
             }
         }
         else {
-            if (userGrid[row][col] != 1 && userGrid[row][col] != 3) {
+            if (userGrid[row][col] == 0) {
                 userGrid[row][col] = 2;
                 this.playerID = 0;
             }

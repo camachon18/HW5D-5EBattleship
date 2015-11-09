@@ -112,9 +112,22 @@ public class BattleshipGameStateTest {
 
     @Test
     public void testShipMissed() throws Exception {
-
+        BattleshipGameState test = new BattleshipGameState();
+        test.shipMissed(3,8);//0
+        test.shipMissed(0,0);//1
+        test.shipMissed(3,8);//0
+        test.setUpComputerShips(2,9,0,false);
+        test.shipHit(9, 0, 3);//0
+        test.shipMissed(5,4);//1
+        test.shipMissed(9,0);//0
+        int[][] testComputerArray = test.getComputerGrid();
+        int[][] testUserArray = test.getUserGrid();
+        assertEquals(2,testComputerArray[3][8]);
+        assertEquals(1,testComputerArray[9][0]);
+        assertEquals(2,testUserArray[0][0]);
+        assertEquals(2,testUserArray[5][4]);
     }
-
+    
     @Test
     public void testSetUpUserShips(int shipNum, int row, int col, boolean isHorizontal) throws Exception {
         BattleshipGameState test = new BattleshipGameState();
@@ -160,4 +173,5 @@ public class BattleshipGameStateTest {
             assertEquals(test.getComputerGrid(),3);
         }
     }
+
 }
