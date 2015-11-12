@@ -3,7 +3,14 @@ package edu.up.cs301.Battleship;
 import edu.up.cs301.game.GamePlayer;
 
 /**
- * Created by nathancamacho on 11/11/15.
+ *  @author Nathan Camacho
+ *  @author Hashim AlJawad
+ *  @author Kelson Sipe
+ *
+ *  @version 11/10/15
+ *
+ *  Description: An interface that defines a Battleship game player.
+ *
  */
 public interface BattleshipPlayer extends GamePlayer {
 

@@ -7,7 +7,7 @@ import edu.up.cs301.game.infoMsg.GameState;
  * @author Hashim AlJawad
  * @author Kelson Sipe
  *
- * Last Modified: 11/9/2015
+ * @version  11/9/2015
  *
  * Description of BattleshipGameState class:
  * BattleshipGameState class inherits from the GameState class which is a part of the game framework.
